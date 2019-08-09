@@ -68,10 +68,27 @@ In case IgyToast's content is higher than screen available height - IgyToast's c
 You can optionally provide a view as `Header` or/and as a `Footer` - those wouldn't be a part of scrolling content.
 
 ```swift
-let headerView: ConstrainedHeightView?
-let footerView: ConstrainedHeightView?
-Toast.current.showToast(contentView, header: headerView, footer: footerView)
+let title: UILabel = .makeZero()
+title.font = .systemFont(ofSize: 24, weight: .heavy)
+title.text = "Title"
+let titleContainer: UIView = .makeZero()
+titleContainer.addSubview(title, with: .init(left: 16, right: 16, top: 8, bottom: 20))
+    
+let field: UITextField = .makeZero()
+field.placeholder = "tap me"
+let fieldContainer: UIView = .makeZero()
+fieldContainer.addSubview(field, with: .init(left: 16, right: 16, top: 16, bottom: 16))
+    
+let imageView = UIImageView(image: #imageLiteral(resourceName: "toast"))
+imageView.contentMode = .scaleAspectFit
+imageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+    
+let stack = UIStackView(arrangedSubviews: [fieldContainer, imageView])
+stack.axis = .vertical
+    
+Toast.current.showToast(stack, header: titleContainer)
 ```
+<img width="400" alt="IgyToast" src="https://github.com/igyvigy/IgyToast/blob/master/IgyToast.gif">
 
 ## Installation
 
@@ -92,7 +109,6 @@ For example project please check <a href="https://github.com/igyvigy/IgyToast/tr
 ## Extra
 
 IgyToast includes class `ConstraintsSettings` which contains convenience methods for adding constraints from code, thanks to [sssbohdan](https://github.com/sssbohdan) 😎
-
 
 ### Requirements
 
