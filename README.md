@@ -77,7 +77,7 @@ Toast.current.showToast(contentView, header: headerView, footer: footerView)
 
 ### Cocoapods
 
-IgyToast is on Cocoapods! After [setting up Cocoapods in your project](https://guides.cocoapods.org/), simply add the folowing to your Podfile:
+IgyToast is on Cocoapods! After [setting up Cocoapods in your project](https://guides.cocoapods.org/using/getting-started.html), simply add the folowing to your Podfile:
 ```
 pod 'IgyToast'
 ```
