@@ -3,7 +3,10 @@
 </H1>
 <H4 align="center">
 <br>IgyToast is a simple bottom-appering view which can be built with custom views</br>
+<br> safe area-aware * iPhone X-ready * rotation-compatible</br>
 </H4>
+
+
 
 <p align="center">
 <a href="https://cocoapods.org/pods/IgyToast"><img alt="Version" src="https://img.shields.io/cocoapods/v/IgyToast.svg?style=flat"></a> 
@@ -40,7 +43,7 @@ Toast.current.showToast(customView)
 ```
 <img width="400" alt="IgyToast" src="https://github.com/igyvigy/IgyToast/blob/master/IgyToast.gif">
 
-Alternatively use views created from XIB or Storyboard who's height is already constrained:
+Alternatively, use views created from XIB or Storyboard who's height is already constrained:
 ```swift
 Toast.current.showToast(customViewFromXIB)
 ```
@@ -48,17 +51,17 @@ in case if Toast contents height changes:
 ```swift
 Toast.current.toastVC?.layoutVertically()
 ```
-...or
-```swift
-UIView.animate(withDuration: 2) {
-    Toast.current.toastVC?.layoutVertically()
-}
-```
 
 to hide programmatically:
 ```swift
 Toast.current.hideToast()
 ```
+...or		
+ ```swift		
+ Toast.current.hideToast {		
+     //called after hide animation finished		
+ }		
+ ```
 
 ### Advanced usage
 
