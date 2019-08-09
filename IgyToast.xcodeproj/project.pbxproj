@@ -13,7 +13,57 @@
 		B52235AA22FD5F70002C4B24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52235A822FD5F70002C4B24 /* Main.storyboard */; };
 		B52235AC22FD5F71002C4B24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B52235AB22FD5F71002C4B24 /* Assets.xcassets */; };
 		B52235AF22FD5F71002C4B24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52235AD22FD5F71002C4B24 /* LaunchScreen.storyboard */; };
+		B5496C1A22FD68FA007FAE76 /* ToastBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5496C1622FD68FA007FAE76 /* ToastBuilder.swift */; };
+		B5496C1B22FD68FA007FAE76 /* CKToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5496C1822FD68FA007FAE76 /* CKToastView.swift */; };
+		B5496C1C22FD68FA007FAE76 /* CKToastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5496C1922FD68FA007FAE76 /* CKToastView.xib */; };
+		B5496C2022FD6A15007FAE76 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5496C1F22FD6A15007FAE76 /* UIView.swift */; };
+		B5496C2222FD6A64007FAE76 /* ConstraintSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5496C2122FD6A63007FAE76 /* ConstraintSettings.swift */; };
+		B5496C2422FD6A98007FAE76 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5496C2322FD6A98007FAE76 /* UIStackView.swift */; };
+		B5496C2622FD6ABC007FAE76 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5496C2522FD6ABC007FAE76 /* Array.swift */; };
+		B5496C2822FD6B56007FAE76 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5496C2722FD6B56007FAE76 /* CALayer.swift */; };
+		B5496C2A22FD6BAF007FAE76 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5496C2922FD6BAF007FAE76 /* CGRect.swift */; };
+		B5496C2C22FD6C10007FAE76 /* NibLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5496C2B22FD6C10007FAE76 /* NibLoadingView.swift */; };
+		B5496C2F22FD6C9A007FAE76 /* ToastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5496C2D22FD6C9A007FAE76 /* ToastVC.swift */; };
+		B5496C3022FD6C9A007FAE76 /* ToastVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5496C2E22FD6C9A007FAE76 /* ToastVC.xib */; };
+		B5496C3222FD74C1007FAE76 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5496C3122FD74C1007FAE76 /* Toast.swift */; };
+		B5496C3A22FD7A66007FAE76 /* IgyToastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5496C3922FD7A66007FAE76 /* IgyToastTests.swift */; };
+		B5496C3C22FD7A66007FAE76 /* IgyToast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B522359322FD5F00002C4B24 /* IgyToast.framework */; };
+		B5496C4422FD7BE1007FAE76 /* IgyToast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B522359322FD5F00002C4B24 /* IgyToast.framework */; };
+		B5496C4522FD7BE1007FAE76 /* IgyToast.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B522359322FD5F00002C4B24 /* IgyToast.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5496C4A22FD8272007FAE76 /* CustomViewFromXIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5496C4922FD8272007FAE76 /* CustomViewFromXIB.swift */; };
+		B5496C4C22FD827D007FAE76 /* CustomViewFromXIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5496C4B22FD827D007FAE76 /* CustomViewFromXIB.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5496C3D22FD7A66007FAE76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B522358A22FD5F00002C4B24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B522359222FD5F00002C4B24;
+			remoteInfo = IgyToast;
+		};
+		B5496C4622FD7BE1007FAE76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B522358A22FD5F00002C4B24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B522359222FD5F00002C4B24;
+			remoteInfo = IgyToast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B5496C4822FD7BE1007FAE76 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B5496C4522FD7BE1007FAE76 /* IgyToast.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B522359322FD5F00002C4B24 /* IgyToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IgyToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +76,24 @@
 		B52235AB22FD5F71002C4B24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B52235AE22FD5F71002C4B24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B52235B022FD5F71002C4B24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5496C1622FD68FA007FAE76 /* ToastBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastBuilder.swift; sourceTree = "<group>"; };
+		B5496C1822FD68FA007FAE76 /* CKToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKToastView.swift; sourceTree = "<group>"; };
+		B5496C1922FD68FA007FAE76 /* CKToastView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKToastView.xib; sourceTree = "<group>"; };
+		B5496C1F22FD6A15007FAE76 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		B5496C2122FD6A63007FAE76 /* ConstraintSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstraintSettings.swift; path = IgyToast/Public/ConstraintSettings.swift; sourceTree = SOURCE_ROOT; };
+		B5496C2322FD6A98007FAE76 /* UIStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		B5496C2522FD6ABC007FAE76 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		B5496C2722FD6B56007FAE76 /* CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
+		B5496C2922FD6BAF007FAE76 /* CGRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
+		B5496C2B22FD6C10007FAE76 /* NibLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadingView.swift; sourceTree = "<group>"; };
+		B5496C2D22FD6C9A007FAE76 /* ToastVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastVC.swift; sourceTree = "<group>"; };
+		B5496C2E22FD6C9A007FAE76 /* ToastVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToastVC.xib; sourceTree = "<group>"; };
+		B5496C3122FD74C1007FAE76 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		B5496C3722FD7A66007FAE76 /* IgyToastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IgyToastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5496C3922FD7A66007FAE76 /* IgyToastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgyToastTests.swift; sourceTree = "<group>"; };
+		B5496C3B22FD7A66007FAE76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5496C4922FD8272007FAE76 /* CustomViewFromXIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewFromXIB.swift; sourceTree = "<group>"; };
+		B5496C4B22FD827D007FAE76 /* CustomViewFromXIB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomViewFromXIB.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +108,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5496C4422FD7BE1007FAE76 /* IgyToast.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5496C3422FD7A66007FAE76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5496C3C22FD7A66007FAE76 /* IgyToast.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,7 +128,9 @@
 			children = (
 				B522359522FD5F00002C4B24 /* IgyToast */,
 				B52235A322FD5F70002C4B24 /* IgyToastExamples */,
+				B5496C3822FD7A66007FAE76 /* IgyToastTests */,
 				B522359422FD5F00002C4B24 /* Products */,
+				B5496C4222FD7B5D007FAE76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +139,7 @@
 			children = (
 				B522359322FD5F00002C4B24 /* IgyToast.framework */,
 				B52235A222FD5F70002C4B24 /* IgyToastExamples.app */,
+				B5496C3722FD7A66007FAE76 /* IgyToastTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				B522359622FD5F00002C4B24 /* IgyToast.h */,
+				B5496C1722FD68FA007FAE76 /* Private */,
+				B5496C1522FD68FA007FAE76 /* Public */,
 				B522359722FD5F00002C4B24 /* Info.plist */,
 			);
 			path = IgyToast;
@@ -78,12 +160,73 @@
 			children = (
 				B52235A422FD5F70002C4B24 /* AppDelegate.swift */,
 				B52235A622FD5F70002C4B24 /* ViewController.swift */,
+				B5496C4922FD8272007FAE76 /* CustomViewFromXIB.swift */,
+				B5496C4B22FD827D007FAE76 /* CustomViewFromXIB.xib */,
 				B52235A822FD5F70002C4B24 /* Main.storyboard */,
 				B52235AB22FD5F71002C4B24 /* Assets.xcassets */,
 				B52235AD22FD5F71002C4B24 /* LaunchScreen.storyboard */,
 				B52235B022FD5F71002C4B24 /* Info.plist */,
 			);
 			path = IgyToastExamples;
+			sourceTree = "<group>";
+		};
+		B5496C1522FD68FA007FAE76 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				B5496C2122FD6A63007FAE76 /* ConstraintSettings.swift */,
+				B5496C2D22FD6C9A007FAE76 /* ToastVC.swift */,
+				B5496C2E22FD6C9A007FAE76 /* ToastVC.xib */,
+				B5496C3122FD74C1007FAE76 /* Toast.swift */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		B5496C1722FD68FA007FAE76 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				B5496C1D22FD6945007FAE76 /* Tools */,
+				B5496C1622FD68FA007FAE76 /* ToastBuilder.swift */,
+				B5496C1822FD68FA007FAE76 /* CKToastView.swift */,
+				B5496C1922FD68FA007FAE76 /* CKToastView.xib */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		B5496C1D22FD6945007FAE76 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				B5496C2B22FD6C10007FAE76 /* NibLoadingView.swift */,
+				B5496C1E22FD6A15007FAE76 /* Extensions */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		B5496C1E22FD6A15007FAE76 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B5496C2522FD6ABC007FAE76 /* Array.swift */,
+				B5496C2722FD6B56007FAE76 /* CALayer.swift */,
+				B5496C2322FD6A98007FAE76 /* UIStackView.swift */,
+				B5496C1F22FD6A15007FAE76 /* UIView.swift */,
+				B5496C2922FD6BAF007FAE76 /* CGRect.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B5496C3822FD7A66007FAE76 /* IgyToastTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5496C3922FD7A66007FAE76 /* IgyToastTests.swift */,
+				B5496C3B22FD7A66007FAE76 /* Info.plist */,
+			);
+			path = IgyToastTests;
+			sourceTree = "<group>";
+		};
+		B5496C4222FD7B5D007FAE76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,15 +268,35 @@
 				B522359E22FD5F70002C4B24 /* Sources */,
 				B522359F22FD5F70002C4B24 /* Frameworks */,
 				B52235A022FD5F70002C4B24 /* Resources */,
+				B5496C4822FD7BE1007FAE76 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B5496C4722FD7BE1007FAE76 /* PBXTargetDependency */,
 			);
 			name = IgyToastExamples;
 			productName = IgyToastExamples;
 			productReference = B52235A222FD5F70002C4B24 /* IgyToastExamples.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B5496C3622FD7A66007FAE76 /* IgyToastTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5496C3F22FD7A66007FAE76 /* Build configuration list for PBXNativeTarget "IgyToastTests" */;
+			buildPhases = (
+				B5496C3322FD7A66007FAE76 /* Sources */,
+				B5496C3422FD7A66007FAE76 /* Frameworks */,
+				B5496C3522FD7A66007FAE76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5496C3E22FD7A66007FAE76 /* PBXTargetDependency */,
+			);
+			name = IgyToastTests;
+			productName = IgyToastTests;
+			productReference = B5496C3722FD7A66007FAE76 /* IgyToastTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -149,6 +312,9 @@
 						CreatedOnToolsVersion = 10.2.1;
 					};
 					B52235A122FD5F70002C4B24 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					B5496C3622FD7A66007FAE76 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
@@ -168,6 +334,7 @@
 			targets = (
 				B522359222FD5F00002C4B24 /* IgyToast */,
 				B52235A122FD5F70002C4B24 /* IgyToastExamples */,
+				B5496C3622FD7A66007FAE76 /* IgyToastTests */,
 			);
 		};
 /* End PBXProject section */
@@ -177,6 +344,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5496C3022FD6C9A007FAE76 /* ToastVC.xib in Resources */,
+				B5496C1C22FD68FA007FAE76 /* CKToastView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +356,14 @@
 				B52235AF22FD5F71002C4B24 /* LaunchScreen.storyboard in Resources */,
 				B52235AC22FD5F71002C4B24 /* Assets.xcassets in Resources */,
 				B52235AA22FD5F70002C4B24 /* Main.storyboard in Resources */,
+				B5496C4C22FD827D007FAE76 /* CustomViewFromXIB.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5496C3522FD7A66007FAE76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +374,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5496C2F22FD6C9A007FAE76 /* ToastVC.swift in Sources */,
+				B5496C2C22FD6C10007FAE76 /* NibLoadingView.swift in Sources */,
+				B5496C1B22FD68FA007FAE76 /* CKToastView.swift in Sources */,
+				B5496C2222FD6A64007FAE76 /* ConstraintSettings.swift in Sources */,
+				B5496C2422FD6A98007FAE76 /* UIStackView.swift in Sources */,
+				B5496C2622FD6ABC007FAE76 /* Array.swift in Sources */,
+				B5496C2822FD6B56007FAE76 /* CALayer.swift in Sources */,
+				B5496C2022FD6A15007FAE76 /* UIView.swift in Sources */,
+				B5496C3222FD74C1007FAE76 /* Toast.swift in Sources */,
+				B5496C1A22FD68FA007FAE76 /* ToastBuilder.swift in Sources */,
+				B5496C2A22FD6BAF007FAE76 /* CGRect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,11 +393,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				B52235A722FD5F70002C4B24 /* ViewController.swift in Sources */,
+				B5496C4A22FD8272007FAE76 /* CustomViewFromXIB.swift in Sources */,
 				B52235A522FD5F70002C4B24 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5496C3322FD7A66007FAE76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5496C3A22FD7A66007FAE76 /* IgyToastTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5496C3E22FD7A66007FAE76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B522359222FD5F00002C4B24 /* IgyToast */;
+			targetProxy = B5496C3D22FD7A66007FAE76 /* PBXContainerItemProxy */;
+		};
+		B5496C4722FD7BE1007FAE76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B522359222FD5F00002C4B24 /* IgyToast */;
+			targetProxy = B5496C4622FD7BE1007FAE76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B52235A822FD5F70002C4B24 /* Main.storyboard */ = {
@@ -406,6 +616,7 @@
 		B52235B222FD5F71002C4B24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DW3EGQ38C2;
@@ -424,6 +635,7 @@
 		B52235B322FD5F71002C4B24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DW3EGQ38C2;
@@ -433,6 +645,42 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.igyvigy.IgyToastExamples;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B5496C4022FD7A66007FAE76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DW3EGQ38C2;
+				INFOPLIST_FILE = IgyToastTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.igyvigy.IgyToastTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5496C4122FD7A66007FAE76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DW3EGQ38C2;
+				INFOPLIST_FILE = IgyToastTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.igyvigy.IgyToastTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -465,6 +713,15 @@
 			buildConfigurations = (
 				B52235B222FD5F71002C4B24 /* Debug */,
 				B52235B322FD5F71002C4B24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5496C3F22FD7A66007FAE76 /* Build configuration list for PBXNativeTarget "IgyToastTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5496C4022FD7A66007FAE76 /* Debug */,
+				B5496C4122FD7A66007FAE76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

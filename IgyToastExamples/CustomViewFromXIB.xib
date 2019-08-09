@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomViewFromXIB" customModule="IgyToastExamples" customModuleProvider="target">
+            <connections>
+                <outlet property="mapView" destination="Wa9-BS-nNw" id="yCx-mt-LkY"/>
+                <outlet property="view" destination="iN0-l3-epB" id="zgG-cU-jLC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="334"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2PR-74-lne">
+                    <rect key="frame" x="0.0" y="0.0" width="350" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="view from XIB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZY-gr-rD9">
+                            <rect key="frame" x="8" y="8" width="334" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="CZY-gr-rD9" firstAttribute="top" secondItem="2PR-74-lne" secondAttribute="top" constant="8" id="4PG-ur-f8b"/>
+                        <constraint firstAttribute="bottom" secondItem="CZY-gr-rD9" secondAttribute="bottom" constant="8" id="QqI-48-TAS"/>
+                        <constraint firstAttribute="height" constant="40" id="Tbe-Up-DAZ"/>
+                        <constraint firstAttribute="trailing" secondItem="CZY-gr-rD9" secondAttribute="trailing" constant="8" id="eEx-zO-nlG"/>
+                        <constraint firstItem="CZY-gr-rD9" firstAttribute="leading" secondItem="2PR-74-lne" secondAttribute="leading" constant="8" id="gnn-uI-rVT"/>
+                    </constraints>
+                </view>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Wa9-BS-nNw">
+                    <rect key="frame" x="0.0" y="40" width="350" height="260"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="260" id="oK9-iY-vwu"/>
+                    </constraints>
+                </mapView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Wa9-BS-nNw" secondAttribute="trailing" id="LVh-og-dRv"/>
+                <constraint firstItem="Wa9-BS-nNw" firstAttribute="top" secondItem="2PR-74-lne" secondAttribute="bottom" id="cee-b7-naU"/>
+                <constraint firstAttribute="trailing" secondItem="2PR-74-lne" secondAttribute="trailing" id="czU-Po-Z4y"/>
+                <constraint firstItem="Wa9-BS-nNw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hqp-R9-5pv"/>
+                <constraint firstItem="2PR-74-lne" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="n0b-lL-8w8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Wa9-BS-nNw" secondAttribute="bottom" id="nI7-hY-mQg"/>
+                <constraint firstItem="2PR-74-lne" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tQW-EB-Uov"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-68.115942028985515" y="-2.6785714285714284"/>
+        </view>
+    </objects>
+</document>

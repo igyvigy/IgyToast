@@ -1,24 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zHX-WW-cs1">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="gTm-wW-V8m">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="zHX-WW-cs1" customClass="ViewController" customModule="IgyToastExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="omH-ez-lsU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="8AH-hw-JsV">
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="custom views" id="ZdF-Fz-yzx">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="937-ob-Lhg">
+                                        <rect key="frame" x="0.0" y="91" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="937-ob-Lhg" id="n8F-IC-rqx">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5Q-cw-hRS">
+                                                    <rect key="frame" x="8" y="6" width="398" height="30"/>
+                                                    <state key="normal" title="Custom View"/>
+                                                    <connections>
+                                                        <action selector="showCustomViewToast:" destination="zHX-WW-cs1" eventType="touchUpInside" id="CAI-AM-7Ww"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="h5Q-cw-hRS" secondAttribute="trailing" constant="8" id="6BV-U7-NvS"/>
+                                                <constraint firstItem="h5Q-cw-hRS" firstAttribute="leading" secondItem="n8F-IC-rqx" secondAttribute="leading" constant="8" id="bDP-xP-s76"/>
+                                                <constraint firstAttribute="bottom" secondItem="h5Q-cw-hRS" secondAttribute="bottom" constant="7.5" id="mVO-g3-2ha"/>
+                                                <constraint firstItem="h5Q-cw-hRS" firstAttribute="top" secondItem="n8F-IC-rqx" secondAttribute="top" constant="6" id="qF7-T3-YgD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XUo-Sd-Qow">
+                                        <rect key="frame" x="0.0" y="135" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XUo-Sd-Qow" id="OWQ-WW-vv8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1th-Pn-HXD">
+                                                    <rect key="frame" x="8" y="6" width="398" height="30"/>
+                                                    <state key="normal" title="Custom View From XIB"/>
+                                                    <connections>
+                                                        <action selector="showCustomViewFromXibToast:" destination="zHX-WW-cs1" eventType="touchUpInside" id="CpS-Cc-O7X"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="1th-Pn-HXD" secondAttribute="trailing" constant="8" id="7AO-fJ-AU0"/>
+                                                <constraint firstItem="1th-Pn-HXD" firstAttribute="leading" secondItem="OWQ-WW-vv8" secondAttribute="leading" constant="8" id="CN1-jk-dXh"/>
+                                                <constraint firstAttribute="bottom" secondItem="1th-Pn-HXD" secondAttribute="bottom" constant="7.5" id="OkE-0p-0gQ"/>
+                                                <constraint firstItem="1th-Pn-HXD" firstAttribute="top" secondItem="OWQ-WW-vv8" secondAttribute="top" constant="6" id="cDT-Bm-DTc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="zHX-WW-cs1" id="vlI-rw-Fsb"/>
+                            <outlet property="delegate" destination="zHX-WW-cs1" id="YnN-Cf-T5D"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OAr-fy-iJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-43" y="7"/>
         </scene>
     </scenes>
 </document>

@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:/Users/andrii/dev/ios/IgyToast/IgyToast/CKToastView"
+      name = "CKToastView">
+      <FileRef
+         location = "group:CKToastView.swift">
+      </FileRef>
+      <FileRef
+         location = "group:CKToastView.xib">
+      </FileRef>
+   </Group>
    <FileRef
-      location = "self:IgyToast.xcodeproj">
+      location = "group:../IgyToast/Toast.swift">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
