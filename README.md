@@ -38,6 +38,8 @@ now show toast with:
 ```swift
 Toast.current.showToast(customView)
 ```
+<img width="400" alt="IgyToast" src="https://github.com/igyvigy/IgyToast/blob/master/IgyToast.gif">
+
 Alternatively use views created from XIB or Storyboard who's height is already constrained:
 ```swift
 Toast.current.showToast(customViewFromXIB)
