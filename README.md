@@ -59,12 +59,6 @@ to hide programmatically:
 ```swift
 Toast.current.hideToast()
 ```
-...or
-```swift
-Toast.current.hideToast {
-    //called after hide animation finished
-}
-```
 
 ### Advanced usage
 
