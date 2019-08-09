@@ -32,6 +32,9 @@
 		B5496C4522FD7BE1007FAE76 /* IgyToast.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B522359322FD5F00002C4B24 /* IgyToast.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5496C4A22FD8272007FAE76 /* CustomViewFromXIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5496C4922FD8272007FAE76 /* CustomViewFromXIB.swift */; };
 		B5496C4C22FD827D007FAE76 /* CustomViewFromXIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5496C4B22FD827D007FAE76 /* CustomViewFromXIB.xib */; };
+		B5496C4F22FD91B7007FAE76 /* IgyToast.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B5496C4E22FD91B7007FAE76 /* IgyToast.podspec */; };
+		B5496C5222FD9308007FAE76 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B5496C5022FD9308007FAE76 /* README.md */; };
+		B5496C5322FD9308007FAE76 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B5496C5122FD9308007FAE76 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +97,9 @@
 		B5496C3B22FD7A66007FAE76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5496C4922FD8272007FAE76 /* CustomViewFromXIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewFromXIB.swift; sourceTree = "<group>"; };
 		B5496C4B22FD827D007FAE76 /* CustomViewFromXIB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomViewFromXIB.xib; sourceTree = "<group>"; };
+		B5496C4E22FD91B7007FAE76 /* IgyToast.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IgyToast.podspec; sourceTree = "<group>"; };
+		B5496C5022FD9308007FAE76 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B5496C5122FD9308007FAE76 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,9 @@
 		B522358922FD5F00002C4B24 = {
 			isa = PBXGroup;
 			children = (
+				B5496C5122FD9308007FAE76 /* LICENSE */,
+				B5496C5022FD9308007FAE76 /* README.md */,
+				B5496C4E22FD91B7007FAE76 /* IgyToast.podspec */,
 				B522359522FD5F00002C4B24 /* IgyToast */,
 				B52235A322FD5F70002C4B24 /* IgyToastExamples */,
 				B5496C3822FD7A66007FAE76 /* IgyToastTests */,
@@ -346,6 +355,9 @@
 			files = (
 				B5496C3022FD6C9A007FAE76 /* ToastVC.xib in Resources */,
 				B5496C1C22FD68FA007FAE76 /* CKToastView.xib in Resources */,
+				B5496C5222FD9308007FAE76 /* README.md in Resources */,
+				B5496C4F22FD91B7007FAE76 /* IgyToast.podspec in Resources */,
+				B5496C5322FD9308007FAE76 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +587,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = IgyToast/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -600,6 +613,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = IgyToast/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -621,6 +635,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DW3EGQ38C2;
 				INFOPLIST_FILE = IgyToastExamples/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -640,6 +655,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DW3EGQ38C2;
 				INFOPLIST_FILE = IgyToastExamples/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

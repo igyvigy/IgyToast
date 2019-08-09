@@ -4,22 +4,25 @@ import IgyToast
 
 class IgyToastTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    override func setUp() {}
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    override func tearDown() { }
 
     func test() {
-      assert(Toast.current != nil)
+      
+      let bundle = Bundle(for: ToastVC.self)
+      let nib = UINib(nibName: "ToastVC", bundle: bundle)
+      dump(nib)
+      assert(bundle != nil)
+      assert(nib != nil)
+      
+      
     }
 
     func testPerformanceExample() {
-        // This is an example of a performance test case.
+      
         self.measure {
-            // Put the code you want to measure the time of here.
+          
         }
     }
 

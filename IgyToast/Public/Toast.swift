@@ -1,10 +1,3 @@
-//
-//  Toast.swift
-//  IgyToast
-//
-//  Created by Andrii on 8/9/19.
-//  Copyright © 2019 io.igyvigy. All rights reserved.
-//
 
 import Foundation
 
@@ -64,7 +57,6 @@ private extension Toast {
         return nav.viewControllers.first
       } else if let toastVC = pvc() as? ToastVC {
         return toastVC.presentingViewController
-        //        toastVC
       } else {
         return pvc()
       }

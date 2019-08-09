@@ -1,10 +1,3 @@
-//
-//  ToastBuilder.swift
-//  ContactKeeper
-//
-//  Created by Andrii on 1/25/19.
-//  Copyright © 2019 ROLIQUE. All rights reserved.
-//
 
 import UIKit
 

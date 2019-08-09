@@ -1,10 +1,3 @@
-//
-//  CKToastView.swift
-//  ContactKeeper
-//
-//  Created by Andrii on 12/5/18.
-//  Copyright © 2018 ROLIQUE. All rights reserved.
-//
 
 import UIKit
 

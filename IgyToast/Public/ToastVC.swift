@@ -1,10 +1,3 @@
-//
-//  ToastVC.swift
-//  ContactKeeper
-//
-//  Created by Andrii on 1/14/19.
-//  Copyright © 2019 ROLIQUE. All rights reserved.
-//
 
 import UIKit
 
@@ -13,6 +6,11 @@ protocol ToastVCDelegate: class {
 }
 
 public final class ToastVC: UIViewController {
+  
+  public var isVisibleAndValid: Bool {
+    guard let toast = toast else { return false }
+    return toast.isShowing
+  }
   
   @IBOutlet weak var button: UIButton!
   

@@ -23,7 +23,7 @@ class ViewController: UITableViewController {
     label.text = "Custom view"
     label.textAlignment = .center
     label.center = view.center
-    view.addSubview(label, with: ConstraintsSettings(edgeInsets: .zero))
+    view.addSubview(label, with: IgyToast.ConstraintsSettings(edgeInsets: .zero))
     label.heightAnchor.constraint(equalToConstant: 100).isActive = true
     return view
   }()
