@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "IgyToast"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "IgyToast is a simple bottom-appering toast which can be built with custom views"
 
   # This description is used to generate tags and improve search results.
@@ -90,8 +90,10 @@ IgyToast is a simple way to display content modally. Feed toast with your custom
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "IgyToast", "IgyToast/**/*.{h,m}"
-  spec.exclude_files = "IgyToast/Exclude"
+  spec.source_files  = "IgyToast/**/*.swift"
+
+  spec.swift_version = "4.2"
+  spec.exclude_files = "IgyToast/Exclude/"
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -106,7 +108,7 @@ IgyToast is a simple way to display content modally. Feed toast with your custom
 
   # spec.resource  = "icon.png"
   # spec.resources = "Resources/*.png"
-
+  spec.resources = "IgyToast/**/*.xib"
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
 
