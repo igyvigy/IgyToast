@@ -69,6 +69,29 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Jak-gp-1re">
+                                        <rect key="frame" x="0.0" y="179" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jak-gp-1re" id="Lqm-CI-srL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIv-Dc-ndO">
+                                                    <rect key="frame" x="8" y="6" width="398" height="30"/>
+                                                    <state key="normal" title="Custom View With Header"/>
+                                                    <connections>
+                                                        <action selector="showViewWithHeader:" destination="zHX-WW-cs1" eventType="touchUpInside" id="Uc8-Q4-Ieb"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="aIv-Dc-ndO" secondAttribute="trailing" constant="8" id="1Z9-Jp-kc1"/>
+                                                <constraint firstItem="aIv-Dc-ndO" firstAttribute="top" secondItem="Lqm-CI-srL" secondAttribute="top" constant="6" id="Vvs-dI-EoN"/>
+                                                <constraint firstItem="aIv-Dc-ndO" firstAttribute="leading" secondItem="Lqm-CI-srL" secondAttribute="leading" constant="8" id="pqv-zV-2WM"/>
+                                                <constraint firstAttribute="bottom" secondItem="aIv-Dc-ndO" secondAttribute="bottom" constant="7.5" id="yXd-1u-A7R"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>

@@ -211,7 +211,7 @@ final class CKToastView: NibLoadingView {
   
   func changeKeyboardHeight(_ newHeight: CGFloat, duration: TimeInterval) {
     self.keyboardAwareKonstraint.constant = newHeight - additionalSpaceValue
-    let animator = UIViewPropertyAnimator(duration: 0.25, curve: .easeInOut) { [weak self] in
+    let animator = UIViewPropertyAnimator(duration: 0.3, curve: .easeOut) { [weak self] in
       self?.parentView.layoutIfNeeded()
     }
     animator.addCompletion { [weak self] position in
