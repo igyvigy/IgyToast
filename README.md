@@ -1,9 +1,8 @@
 <H1 align="center">
-🦎 IgyToast 🦎
+IgyToast 🦎🍞
 </H1>
 <H4 align="center">
-<br>IgyToast is a simple bottom-appering view which can be built with custom views</br>
-<br> safe area-aware * iPhone X-ready * rotation-compatible</br>
+<br> safe area-aware 🤹‍ iPhone X-ready 📲 keyboard-handling ⌨️ rotation-compatible 🔄</br>
 </H4>
 
 
@@ -43,7 +42,7 @@ Toast.current.showToast(customView)
 ```
 <img width="400" alt="IgyToast" src="https://github.com/igyvigy/IgyToast/blob/master/IgyToast.gif">
 
-Alternatively, use views created from XIB or Storyboard who's height is already constrained:
+Alternatively, use views created from XIB or Storyboard, who's height is already constrained:
 ```swift
 Toast.current.showToast(customViewFromXIB)
 ```
@@ -51,7 +50,6 @@ in case if Toast contents height changes:
 ```swift
 Toast.current.toastVC?.layoutVertically()
 ```
-
 to hide programmatically:
 ```swift
 Toast.current.hideToast()
@@ -65,11 +63,13 @@ Toast.current.hideToast()
 
 ### Advanced usage
 
-in case Toast's content is higher than screen available screen height - Toast's content becomes scrollable vertically.
+In case IgyToast's content is higher than screen available height - IgyToast's content becomes scrollable vertically.
 
-you can optionally provide separate view as `Header` or as `Footer` - those wouldn't be a part of scrolling content
+You can optionally provide a view as `Header` or/and as a `Footer` - those wouldn't be a part of scrolling content.
 
 ```swift
+let headerView: ConstrainedHeightView?
+let footerView: ConstrainedHeightView?
 Toast.current.showToast(contentView, header: headerView, footer: footerView)
 ```
 
@@ -91,7 +91,7 @@ For example project please check <a href="https://github.com/igyvigy/IgyToast/tr
 
 ## Extra
 
-IgyToast includes class `IgyToast.ConstraintsSettings` which contains convenience methods for adding constraints from code made by [sssbohdan](https://github.com/sssbohdan) 😎
+IgyToast includes class `ConstraintsSettings` which contains convenience methods for adding constraints from code, thanks to [sssbohdan](https://github.com/sssbohdan) 😎
 
 
 ### Requirements
