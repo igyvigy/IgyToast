@@ -10,7 +10,7 @@ extension UIStackView {
    - Parameter isHidden: Should be hidden or showed.
    - Parameter animated: Default value = false
    */
-  public func setHidden(_ indices: [Int], isHidden: Bool, animated: Bool = false, completion: (() -> Void)? = nil) {
+   func setHidden(_ indices: [Int], isHidden: Bool, animated: Bool = false, completion: (() -> Void)? = nil) {
     guard !animated else {
       UIView.animate(withDuration: animated ? 0.25 : 0, animations: {
         self.configureViews(for: indices, isHidden: isHidden)
@@ -23,15 +23,15 @@ extension UIStackView {
     completion?()
   }
   
-  public func hide(_ indices: [Int], animated: Bool = false, completion: (() -> Void)? = nil) {
+   func hide(_ indices: [Int], animated: Bool = false, completion: (() -> Void)? = nil) {
     setHidden(indices, isHidden: true, animated: animated, completion: completion)
   }
   
-  public func show(_ indices: [Int], animated: Bool = false, completion: (() -> Void)? = nil) {
+   func show(_ indices: [Int], animated: Bool = false, completion: (() -> Void)? = nil) {
     setHidden(indices, isHidden: false, animated: animated, completion: completion)
   }
   
-  public func configureViews(for indices: [Int], isHidden: Bool, animated: Bool = true, completion: @escaping () -> Void) {
+   func configureViews(for indices: [Int], isHidden: Bool, animated: Bool = true, completion: @escaping () -> Void) {
     guard !animated else {
       UIView.animate(withDuration: animated ? 0.25 : 0, animations: {
         self.configureViews(for: indices, isHidden: isHidden)
