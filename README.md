@@ -88,7 +88,7 @@ stack.axis = .vertical
     
 Toast.current.showToast(stack, header: titleContainer)
 ```
-<img width="400" alt="IgyToast" src="https://github.com/igyvigy/IgyToast/blob/master/IgyToast.gif">
+<img width="400" alt="IgyToast" src="https://github.com/igyvigy/IgyToast/blob/master/IMG_0091.TRIM.gif">
 
 ## Installation
 
