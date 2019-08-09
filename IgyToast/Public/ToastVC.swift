@@ -7,9 +7,8 @@ protocol ToastVCDelegate: class {
 
 public final class ToastVC: UIViewController {
   
-  public var isVisibleAndValid: Bool {
-    guard let toast = toast else { return false }
-    return toast.isShowing
+  public func layoutVertically() {
+    toast?.view?.layoutVertically()
   }
   
   @IBOutlet weak var button: UIButton!
