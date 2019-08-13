@@ -48,7 +48,7 @@ Toast.current.showToast(customViewFromXIB)
 ```
 in case if Toast contents height changes:
 ```swift
-Toast.current.toastVC?.layoutVertically()
+Toast.current.layoutVertically()
 ```
 to hide programmatically:
 ```swift
