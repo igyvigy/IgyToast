@@ -6,11 +6,7 @@ protocol ToastVCDelegate: class {
 }
 
 public final class ToastVC: UIViewController {
-  
-  public func layoutVertically() {
-    toast?.view?.layoutVertically()
-  }
-  
+
   @IBOutlet weak var button: UIButton!
   
   var toast: ToastBuilder?
@@ -67,4 +63,19 @@ public final class ToastVC: UIViewController {
     }
   }
   
+  func layoutVertically() {
+    toast?.view?.layoutVertically()
+  }
+  
+  func getCurrentContentView() -> UIView? {
+    return toast?.view?.currentContentView
+  }
+  
+  func getCurrentHeaderView() -> UIView? {
+    return toast?.view?.currentTitleView
+  }
+  
+  func toggle(duration: TimeInterval) {
+    toast?.view?.toggle(duration: duration)
+  }
 }

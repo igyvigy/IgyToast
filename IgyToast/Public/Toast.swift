@@ -28,6 +28,12 @@ public final class Toast: NSObject {
 }
 
 public extension Toast {
+  // MARK: - create and show new toast
+  /**
+   - Parameter view: view used as content for toast. Toast will calculate content height, based on vertival conctraints
+   - Parameter header: optional header view. Header is not a part of vertically scrolling content and allways stays on top
+   - Parameter footer: optional footer view. Footer is not a part of vertically scrolling content and allways stays on the bootom
+   */
   func showToast(_ view: UIView, header: UIView? = nil, footer: UIView? = nil) {
     isShowingToastVC?(true)
     
@@ -40,6 +46,11 @@ public extension Toast {
     }
   }
   
+  // MARK: - hide current toast
+  /**
+   used to recalculate the height of toast's content
+   - Parameter completion: called after toast finished animating
+   */
   func hideToast(_ completion: (() -> Void)? = nil) {
     if let toastVC = toastVC {
       toastHideCompletion = completion
@@ -47,6 +58,39 @@ public extension Toast {
     } else {
       completion?()
     }
+  }
+  
+  // MARK: - calculate content height
+  /**
+   used to recalculate height of tost's content
+   */
+  func layoutVertically() {
+    toastVC?.layoutVertically()
+  }
+  
+  // MARK: - get toast's content view
+  /**
+   that is the view, passed when presenting a toast
+   */
+  func getCurrentContentView() -> UIView? {
+    return toastVC?.getCurrentContentView()
+  }
+  
+  // MARK: - get toast's header view
+  /**
+   that is the view, passed as `header` when presenting a toast
+   */
+  func getCurrentHeaderView() -> UIView? {
+    return toastVC?.getCurrentHeaderView()
+  }
+  
+  // MARK: - toggle toast
+  /**
+   hide current toast if visible, show if not.
+   - Parameter duration: Duration of animation. `Default` for `show` = 0.5, for `hide` = 0.25
+   */
+  func toggle(duration: TimeInterval) {
+    toastVC?.toggle(duration: duration)
   }
 }
 
