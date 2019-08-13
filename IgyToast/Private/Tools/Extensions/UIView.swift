@@ -2,19 +2,19 @@
 import UIKit
 
 extension UIView {
-   func addBorder(width: CGFloat, color: UIColor, cornerRadius: CGFloat = 0) {
+  func addBorder(width: CGFloat, color: UIColor, cornerRadius: CGFloat = 0) {
     layer.addBorder(width: width, color: color, cornerRadius: cornerRadius)
   }
   
-   func roundCorner(radius: CGFloat) {
+  func roundCorner(radius: CGFloat) {
     layer.roundCorner(radius: radius)
   }
   
-   func animateCornerRadius(to value: CGFloat, with interval: TimeInterval) {
+  func animateCornerRadius(to value: CGFloat, with interval: TimeInterval) {
     layer.animateCornerRadius(to: value, with: interval)
   }
   
-   func toCirle() {
+  func toCirle() {
     layer.roundCorner(radius: bounds.height / 2)
     clipsToBounds = true
   }

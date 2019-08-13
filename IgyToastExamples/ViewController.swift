@@ -31,7 +31,7 @@ class ViewController: UITableViewController {
   
   
   @IBAction func showCustomViewToast(_ sender: Any) {
-    Toast.current.showToast(customView)
+    Toast.current.show(customView)
   }
   
   lazy var customViewFromXIB: CustomViewFromXIB = {
@@ -39,7 +39,7 @@ class ViewController: UITableViewController {
   }()
   
   @IBAction func showCustomViewFromXibToast(_ sender: Any) {
-    Toast.current.showToast(customViewFromXIB)
+    Toast.current.show(customViewFromXIB)
   }
   
   @IBAction func showViewWithHeader(_ sender: Any) {
@@ -62,7 +62,7 @@ class ViewController: UITableViewController {
     let stack = UIStackView(arrangedSubviews: [fieldContainer, imageView])
     stack.axis = .vertical
     
-    Toast.current.showToast(stack, header: titleContainer)
+    Toast.current.show(stack, header: titleContainer)
   }
 }
 

@@ -5,15 +5,15 @@ public final class Toast: NSObject {
   public static let current = Toast()
   private override init () {}
   
-  var toastQueue: [(toast: UIView, header: UIView?)] = []
-  var toastHideCompletion: (() -> Void)?
-  var isShowingToastVC: ((Bool) -> Void)?
+  private var toastQueue: [(toast: UIView, header: UIView?)] = []
+  private var toastHideCompletion: (() -> Void)?
+  private var isShowingToastVC: ((Bool) -> Void)?
   
   public var toastVC: ToastVC? {
     didSet {
       if toastVC == nil {
         if let nextToast = toastQueue.first {
-          showToast(nextToast.toast, header: nextToast.header)
+          show(nextToast.toast, header: nextToast.header)
           toastQueue.removeFirst()
         }
         if let _ = toastHideCompletion {
@@ -34,15 +34,15 @@ public extension Toast {
    - Parameter header: optional header view. Header is not a part of vertically scrolling content and allways stays on top
    - Parameter footer: optional footer view. Footer is not a part of vertically scrolling content and allways stays on the bootom
    */
-  func showToast(_ view: UIView, header: UIView? = nil, footer: UIView? = nil) {
+  func show(_ view: UIView, header: UIView? = nil, footer: UIView? = nil) {
     isShowingToastVC?(true)
     
     if let _ = toastVC {
-      hideToast() { [unowned self] in
-        self.show(view, header: header, footer: footer)
+      hide() { [unowned self] in
+        self.showToast(view, header: header, footer: footer)
       }
     } else {
-      show(view, header: header, footer: footer)
+      showToast(view, header: header, footer: footer)
     }
   }
   
@@ -51,7 +51,7 @@ public extension Toast {
    used to recalculate the height of toast's content
    - Parameter completion: called after toast finished animating
    */
-  func hideToast(_ completion: (() -> Void)? = nil) {
+  func hide(_ completion: (() -> Void)? = nil) {
     if let toastVC = toastVC {
       toastHideCompletion = completion
       toastVC.toast?.hide()
@@ -95,7 +95,7 @@ public extension Toast {
 }
 
 private extension Toast {
-  func show(_ view: UIView, header: UIView? = nil, footer: UIView? = nil) {
+  func showToast(_ view: UIView, header: UIView? = nil, footer: UIView? = nil) {
     let vc: UIViewController? = {
       if let nav = pvc() as? UINavigationController {
         return nav.viewControllers.first
