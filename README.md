@@ -38,13 +38,13 @@ lazy var customView: UIView = {
 
 now show toast with:
 ```swift
-Toast.current.showToast(customView)
+Toast.current.show(customView)
 ```
 <img width="400" alt="IgyToast" src="https://github.com/igyvigy/IgyToast/blob/master/IgyToast.gif">
 
 Alternatively, use views created from XIB or Storyboard, who's height is already constrained:
 ```swift
-Toast.current.showToast(customViewFromXIB)
+Toast.current.show(customViewFromXIB)
 ```
 in case if Toast contents height changes:
 ```swift
@@ -52,11 +52,11 @@ Toast.current.layoutVertically()
 ```
 to hide programmatically:
 ```swift
-Toast.current.hideToast()
+Toast.current.hide()
 ```
 ...or		
  ```swift		
- Toast.current.hideToast {		
+ Toast.current.hide {		
      //called after hide animation finished		
  }		
  ```
@@ -91,7 +91,7 @@ imageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
 let stack = UIStackView(arrangedSubviews: [fieldContainer, imageView])
 stack.axis = .vertical
     
-Toast.current.showToast(stack, header: titleContainer)
+Toast.current.show(stack, header: titleContainer)
 ```
 <img width="400" alt="IgyToast" src="https://github.com/igyvigy/IgyToast/blob/master/IMG_0091.TRIM.gif">
 
