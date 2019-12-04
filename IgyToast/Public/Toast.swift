@@ -8,6 +8,10 @@ public final class Toast: NSObject {
   private var toastQueue: [(toast: UIView, header: UIView?)] = []
   private var toastHideCompletion: (() -> Void)?
   private var isShowingToastVC: ((Bool) -> Void)?
+  /**
+   The closure will be triggered when the user taps on a clear view or will swipe down to close toast.
+  */
+  public var willBeClosedByUserInterection: (() -> Void)?
   
   public var toastVC: ToastVC? {
     didSet {
@@ -33,16 +37,17 @@ public extension Toast {
    - Parameter view: view used as content for toast. Toast will calculate content height, based on vertival conctraints
    - Parameter header: optional header view. Header is not a part of vertically scrolling content and allways stays on top
    - Parameter footer: optional footer view. Footer is not a part of vertically scrolling content and allways stays on the bootom
+   - Parameter backgroundColor: optional background color. By default background color is white.
    */
-  func show(_ view: UIView, header: UIView? = nil, footer: UIView? = nil) {
+  func show(_ view: UIView, header: UIView? = nil, footer: UIView? = nil, backgroundColor: UIColor? = nil) {
     isShowingToastVC?(true)
     
     if let _ = toastVC {
       hide() { [unowned self] in
-        self.showToast(view, header: header, footer: footer)
+        self.showToast(view, header: header, footer: footer, backgroundColor: backgroundColor)
       }
     } else {
-      showToast(view, header: header, footer: footer)
+      showToast(view, header: header, footer: footer, backgroundColor: backgroundColor)
     }
   }
   
@@ -95,7 +100,7 @@ public extension Toast {
 }
 
 private extension Toast {
-  func showToast(_ view: UIView, header: UIView? = nil, footer: UIView? = nil) {
+  func showToast(_ view: UIView, header: UIView? = nil, footer: UIView? = nil, backgroundColor: UIColor? = nil) {
     let vc: UIViewController? = {
       if let nav = pvc() as? UINavigationController {
         return nav.viewControllers.first
@@ -105,7 +110,7 @@ private extension Toast {
         return pvc()
       }
     }()
-    let tvc = ToastVC.make(view, header: header, footer: footer)
+    let tvc = ToastVC.make(view, header: header, footer: footer, backgroundColor: backgroundColor)
     vc?.present(tvc, animated: false, completion: nil)
     tvc.toast?.view?.delegate = self
     self.toastVC = tvc
@@ -128,5 +133,9 @@ extension Toast: CKToastViewDelegate {
     isShowingToastVC?(false)
     self.toastVC?.dismiss(animated: false, completion: nil)
     self.toastVC = nil
+  }
+  
+  func toastViewWillBeClosedByUserIterection() {
+    willBeClosedByUserInterection?()
   }
 }

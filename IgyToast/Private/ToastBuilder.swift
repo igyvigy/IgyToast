@@ -8,10 +8,10 @@ final class ToastBuilder {
   var blurView: UIVisualEffectView
   weak var vc: UIViewController?
   
-  class func make(on vc: UIViewController, view: UIView, header: UIView? = nil, footer: UIView? = nil) -> ToastBuilder {
+  class func make(on vc: UIViewController, view: UIView, header: UIView? = nil, footer: UIView? = nil, backgroundColor: UIColor? = nil) -> ToastBuilder {
     let toast = ToastBuilder()
     toast.vc = vc
-    toast.view = toast.makeView(view, header: header, footer: footer)
+    toast.view = toast.makeView(view, header: header, footer: footer, backgroundColor: backgroundColor)
     
     return toast
   }
@@ -21,7 +21,7 @@ final class ToastBuilder {
     self.blurView.isHidden = true
   }
   
-  private func makeView(_ view: UIView, header: UIView? = nil, footer: UIView? = nil) -> CKToastView? {
+  private func makeView(_ view: UIView, header: UIView? = nil, footer: UIView? = nil, backgroundColor: UIColor? = nil) -> CKToastView? {
     guard let vc = vc else { return nil }
     let toastView = CKToastView(frame: .zero)
     toastView.translatesAutoresizingMaskIntoConstraints = false
@@ -32,7 +32,7 @@ final class ToastBuilder {
     NSLayoutConstraint.activate([bottomCnstraint, leadingConstraint, trailingConstraint])
     let constraintSettings = ConstraintsSettings(left: 0, right: 0, top: 0, bottom: 0)
     vc.view.addSubview(blurView, with: constraintSettings)
-    toastView.configure(view, blurView: blurView, bottomConstraint: bottomCnstraint, parentView: vc.view, title: nil, headerView: header, footerView: footer)
+    toastView.configure(view, blurView: blurView, bottomConstraint: bottomCnstraint, parentView: vc.view, title: nil, headerView: header, footerView: footer, backgroundColor: backgroundColor)
     return toastView
   }
   

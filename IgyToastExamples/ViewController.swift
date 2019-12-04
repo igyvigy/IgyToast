@@ -43,7 +43,6 @@ class ViewController: UITableViewController {
   }
   
   @IBAction func showViewWithHeader(_ sender: Any) {
-    
     let title: UILabel = .makeZero()
     title.font = .systemFont(ofSize: 24, weight: .heavy)
     title.text = "Title"
