@@ -13,17 +13,17 @@ public final class ToastVC: UIViewController {
   weak var delegate: ToastVCDelegate?
   var grantFirstResponder: Bool = false
   
-  static func make(_ view: UIView, header: UIView? = nil, grantFirstResponder: Bool = false, footer: UIView? = nil) -> ToastVC {
-    let toastVC = ToastVC(view, header: header, grantFirstResponder: grantFirstResponder, footer: footer)
+  static func make(_ view: UIView, header: UIView? = nil, grantFirstResponder: Bool = false, footer: UIView? = nil, backgroundColor: UIColor) -> ToastVC {
+    let toastVC = ToastVC(view, header: header, grantFirstResponder: grantFirstResponder, footer: footer, backgroundColor: backgroundColor)
     toastVC.modalPresentationStyle = .overCurrentContext
     return toastVC
   }
   
-  init(_ view: UIView, header: UIView? = nil, grantFirstResponder: Bool = false, footer: UIView? = nil) {
+  init(_ view: UIView, header: UIView? = nil, grantFirstResponder: Bool = false, footer: UIView? = nil, backgroundColor: UIColor) {
     let bundle = Bundle(for: CKToastView.self)
     super.init(nibName: "ToastVC", bundle: bundle)
     self.grantFirstResponder = grantFirstResponder
-    self.toast = ToastBuilder.make(on: self, view: view, header: header, footer: footer)
+    self.toast = ToastBuilder.make(on: self, view: view, header: header, footer: footer, backgroundColor: backgroundColor)
   }
   
   override public func viewDidLoad() {

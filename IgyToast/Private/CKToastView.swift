@@ -3,6 +3,7 @@ import UIKit
 
 protocol CKToastViewDelegate: class {
   func toastViewDidClose(_ toastView: CKToastView)
+  func toastViewWillBeClosedByUserInteraction()
 }
 
 final class CKToastView: NibLoadingView {
@@ -21,6 +22,7 @@ final class CKToastView: NibLoadingView {
   @IBOutlet weak var holderView: UIView!
   @IBOutlet weak var contentView: UIView!
   @IBOutlet weak var footerView: UIView!
+  @IBOutlet weak var bottomCoverView: UIView!
   
   @IBOutlet weak var titleView: UIView!
   @IBOutlet weak var titleLabel: UILabel!
@@ -85,7 +87,7 @@ final class CKToastView: NibLoadingView {
     contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
   }
   
-  func configure(_ subview: UIView, blurView: UIVisualEffectView, bottomConstraint: NSLayoutConstraint, parentView: UIView, title: String? = nil, headerView: UIView? = nil, footerView: UIView? = nil) {
+  func configure(_ subview: UIView, blurView: UIVisualEffectView, bottomConstraint: NSLayoutConstraint, parentView: UIView, title: String? = nil, headerView: UIView? = nil, footerView: UIView? = nil, backgroundColor: UIColor) {
     blurEffectView = blurView
     self.parentView = parentView
     self.bottomConstraint = bottomConstraint
@@ -105,6 +107,8 @@ final class CKToastView: NibLoadingView {
     if let fV = footerView {
       self.footerView.addSubview(fV, with: .zero)
     }
+    
+    [contentView, bottomCoverView].forEach { $0?.backgroundColor = backgroundColor }
   }
   
   deinit {
@@ -224,6 +228,7 @@ final class CKToastView: NibLoadingView {
   
   @objc func handleTap(tapper: UITapGestureRecognizer) {
     toggle(duration: 0.5)
+    delegate?.toastViewWillBeClosedByUserInteraction()
   }
   
   @objc func handlePan(panner: UIPanGestureRecognizer) {
@@ -264,6 +269,7 @@ final class CKToastView: NibLoadingView {
           return
         }
         animator.continueAnimation(withTimingParameters: animator.timingParameters, durationFactor: 1)
+        delegate?.toastViewWillBeClosedByUserInteraction()
       }
     default: break
     }
