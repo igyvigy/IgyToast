@@ -60,6 +60,11 @@ Toast.current.hideToast()
      //called after hide animation finished		
  }		
  ```
+ 
+ set background color:
+ ```swift    
+ Toast.current.backgroundColor = .white
+ ```
 
 ### Advanced usage
 
