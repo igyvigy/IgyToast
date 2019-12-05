@@ -8,7 +8,7 @@ final class ToastBuilder {
   var blurView: UIVisualEffectView
   weak var vc: UIViewController?
   
-  class func make(on vc: UIViewController, view: UIView, header: UIView? = nil, footer: UIView? = nil, backgroundColor: UIColor? = nil) -> ToastBuilder {
+  class func make(on vc: UIViewController, view: UIView, header: UIView? = nil, footer: UIView? = nil, backgroundColor: UIColor) -> ToastBuilder {
     let toast = ToastBuilder()
     toast.vc = vc
     toast.view = toast.makeView(view, header: header, footer: footer, backgroundColor: backgroundColor)
@@ -21,7 +21,7 @@ final class ToastBuilder {
     self.blurView.isHidden = true
   }
   
-  private func makeView(_ view: UIView, header: UIView? = nil, footer: UIView? = nil, backgroundColor: UIColor? = nil) -> CKToastView? {
+  private func makeView(_ view: UIView, header: UIView? = nil, footer: UIView? = nil, backgroundColor: UIColor) -> CKToastView? {
     guard let vc = vc else { return nil }
     let toastView = CKToastView(frame: .zero)
     toastView.translatesAutoresizingMaskIntoConstraints = false
@@ -36,10 +36,10 @@ final class ToastBuilder {
     return toastView
   }
   
-  func replaceView(_ view: UIView, header: UIView? = nil) {
+  func replaceView(_ view: UIView, header: UIView? = nil, backgroundColor: UIColor) {
     self.view?.removeFromSuperview()
     self.view = nil
-    self.view = makeView(view, header: header)
+    self.view = makeView(view, header: header, backgroundColor: backgroundColor)
   }
   
   func show(grantFirstResponder: Bool = false) {
